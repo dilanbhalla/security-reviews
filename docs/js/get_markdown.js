@@ -211,5 +211,9 @@ Date.prototype.toDateInputValue = (function() {
 
             $('#markdown').val(t);
             $('.modal').modal();
+
+            $('#submitMarkdown').click(function() {
+              alert(1);
+            });
         });
     });

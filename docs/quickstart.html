@@ -363,16 +363,25 @@
         <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">Markdown Text</h1>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+                  <div>
+                    <h1 class="modal-title">Confirm Submission</h1>
+                    <br>
+                    <h4>Here is the markdown text of your submission.
+                      If this information looks right to you, click
+                      "Submit" and this text will be added to the
+                      location you specify at the bottom. Then
+                      just submit a Pull Request to add your review!</h4>
+                    <br>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
                 <div class="modal-body">
                     <textarea id="markdown" class="form-control" style="width: 100%;" rows="35"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary copyClipboard">Copy to Clipboard</button>
+                    <button type="button" id="submitMarkdown" class="btn btn-primary">Submit</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
