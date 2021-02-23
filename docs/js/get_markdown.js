@@ -5,6 +5,7 @@ Date.prototype.toDateInputValue = (function() {
     });
 
     var abortSubmission = false;
+    var t = '';
 
     $(window).on('load', function() {
         $('#reviewDate').val(new Date().toDateInputValue());
@@ -129,7 +130,7 @@ Date.prototype.toDateInputValue = (function() {
               return false;
             }
 
-            var t = '';
+            t = '';
             t += '---\n'
             t += 'Publication-State: ' + $('#publicationState').val() + '\n';
 
@@ -212,8 +213,25 @@ Date.prototype.toDateInputValue = (function() {
             $('#markdown').val(t);
             $('.modal').modal();
 
-            $('#submitMarkdown').click(function() {
-              alert(1);
-            });
-        });
+          });
+
+          $('#submitMarkdown').click(function() {
+            var file = new Blob([t], {type: 'text/plain'});
+            var a = document.createElement("a"), url = URL.createObjectURL(file);
+            a.href = url;
+            var date = new Date();
+            var date_string = date.toString();
+            var reviewer = 'none'
+            if ($('#reviewer0Name').val() != '') {
+              reviewer = $('#reviewer0Name').val().toLowerCase();
+            }
+            var dateString = (new Date()).toISOString().replace(/[^0-9]/g, "");
+            a.download = 'review' + dateString + '.md';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(function() {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 0);
+          });
     });
