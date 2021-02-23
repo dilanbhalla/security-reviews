@@ -115,6 +115,24 @@ textarea {
   }
 }
 
+#reviewURL1 {
+ float: left;
+ font-size: 15px;
+}
+
+#reviewURL2 {
+ display: block;
+ overflow: hidden;
+ padding: 0px 4px 0px 6px;
+ padding-bottom: 10px;
+ width: 50%;
+}
+
+#reviewURL3 {
+ width: 100%;
+ font-size: 15px;
+}
+
 /* ==========================================================================
    #MAJORITY OF ADDED CSS ELEMENTS FOR QUICKSTART TEMPLATE END HERE
    ========================================================================== */
