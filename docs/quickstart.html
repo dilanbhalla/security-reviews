@@ -338,15 +338,6 @@
                                   </div>
                               </div>
 
-                              <div class="form-row">
-                                  <label class="label label--block">Review Directory:</label>
-                                  <label for="test" id="reviewURL1">github.com/ossf/security-reviews/docs/</label>
-                                  <span id="reviewURL2">
-                                    <input class="input--style-5" id="reviewURL3"
-                                     type="text" placeholder="github/madler/zlib"/>
-                                  </span>
-                              </div>
-
                               <div class="form-row p-t-20">
                                   <label class="label label--block">This review does not contain any significant, undisclosed, or unpatched security vulnerabilities.</label>
                                   <div class="p-t-15">
@@ -376,10 +367,10 @@
                     <h1 class="modal-title">Confirm Submission</h1>
                     <br>
                     <h4>Here is the markdown text of your submission.
-                      If this information looks right to you, click
-                      "Submit" and this text will be added to the
-                      location you specify at the bottom. Then
-                      just submit a Pull Request to add your review!</h4>
+                      If this information looks right to you, download
+                      it, attach it to a reasonable location in the
+                      "reviews" folder of the GitHub repository, and
+                      submit a Pull Request to add your review!</h4>
                     <br>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -390,7 +381,7 @@
                     <textarea id="markdown" class="form-control" style="width: 100%;" rows="35"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="submitMarkdown" class="btn btn-primary">Submit</button>
+                    <button type="button" id="submitMarkdown" class="btn btn-primary">Download</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
